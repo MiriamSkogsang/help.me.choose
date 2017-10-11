@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang=en>
+ <head>
+   <meta charset="utf-8"
+   <title>Hjälp mig välja</title>
+   <link href="./main.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+   <h1>hjälp mig välja mellan...</h1>
+   <div class="inputSection">
+     <div class="inputs">
+       <input placeholder="Någonting"></input>
+     </div>
+     <button class="laggtillOption">Lägg till</button>
+   </div>
+   <div class="resultSection"></div>
+   <button>Kör!</button>
+
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script>
+    $(function() {
+      $(".resultSection").hide()
+
+      var laggtill_option = function() {
+        $(".inputs").append("<input></input>")
+      }
+
+      $(".laggtillOption").click(laggtill_option)
+    })
+   </script>
+ </body>
+</html>
